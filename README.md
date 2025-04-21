@@ -10,12 +10,12 @@ This is a simple calculator that can perform basic arithmetic operations such as
 - division
 
 ## Dependencies 
-To install all dependencies just run 
+To install all dependencies
     
     npm install
 
 ## Execution 
-To execute the program 
+To execute the program
 
     node app.js
    
