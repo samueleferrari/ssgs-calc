@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build: 
+  test: 
     runs-on: ubuntu-latest
 
     steps: 
@@ -15,8 +15,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with: 
-          node-version: '14'
+          node-version: '18'
       - name: Install Dependencies
         run: npm install
-      - name: Run tests
-        run: npm test
+      - name: Run Tests with Coverage
+        run: npm test -- --coverage
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage/
