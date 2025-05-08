@@ -1,15 +1,31 @@
 {
-  "name": "ssgs-calc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^29.7.0"
-  }
+    "name": "ssgs-calc",
+    "version": "1.0.0",
+    "description": "A very simple calculator",
+    "main": "src/app.js",
+    "scripts": {
+        "test": "jest --coverage --verbose",
+        "start": "node ./src/app.js"
+    },
+    "keywords": ["calculator", "ssgs", "grouping", "math", "nodejs"],
+    "author": "Samuele Ferrari <samueleferrari12@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "n": "^10.1.0",
+        "stable": "^0.1.8"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/samueleferrari/ssgs-calc.git"
+    },
+    "bugs": {
+        "url": "https://github.com/samueleferrari/ssgs-calc/issues"
+    },
+    "homepage": "https://github.com/samueleferrari/ssgs-calc#readme",
+    "engines": {
+        "node": ">=18.19.1"
+    }
 }
