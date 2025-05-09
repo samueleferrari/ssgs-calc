@@ -8,6 +8,7 @@ This is a simple calculator that can perform basic arithmetic operations such as
 - subtraction
 - multiplication
 - division
+- power
 
 ## Installation ⚙️
 This software works with [node.js](https://nodejs.org) **v18.19.1** or higher so make sure to have it installed using 
