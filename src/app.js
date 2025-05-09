@@ -1,5 +1,5 @@
 const readline = require('readline');
-const { sum, sub, mul, divide } = require('./math');
+const {sum, sub, mul, divide, pow} = require('./math');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -22,11 +22,12 @@ async function Operation() {
         console.log("2. Subtraction");
         console.log("3. Multiplication");
         console.log("4. Division");
-        console.log("5. Exit");
+        console.log("5. Power");
+        console.log("0. Exit");
 
         const choice = await askQuestion("Enter your choice: ");
 
-        if (choice === '5') {
+        if (choice === '0') {
             console.log("Thanks for using this app.");
             console.log("Goodbye!");
             rl.close();
@@ -63,6 +64,13 @@ async function Operation() {
                     continue;
                 }
                 result = divide(firstNumber, secondNumber);
+                break;
+            case '5':
+                if(firstNumber == 0 && secondNumber == 0){
+                    console.log("Error: Power of 0^0 is not allowed.");
+                    continue;
+                }
+                result = pow(firstNumber, secondNumber);
                 break;
             default:
                 console.log("Invalid choice. Please select a valid operation.");

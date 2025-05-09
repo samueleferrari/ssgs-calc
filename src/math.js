@@ -14,4 +14,8 @@ function mul(a, b){
     return a * b;
 }
 
-module.exports = {sum, sub, divide, mul};
+function pow(a,b){
+    return a ** b;
+}
+
+module.exports = {sum, sub, divide, mul, pow};
